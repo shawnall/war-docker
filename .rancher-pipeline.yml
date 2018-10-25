@@ -1,0 +1,11 @@
+stages:
+- name: compile
+  steps:
+  - runScriptConfig:
+      image: java:8
+      shellScript: java run
+- name: doing
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
